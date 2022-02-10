@@ -2,9 +2,11 @@
 
     This chapter describes utility nodes.
 
-    [ch (id=set_node) [title [c !set]]
+    Utility nodes are all part of the namespace prefix [c u].
 
-        A [c !set] node assigns a value to one or more parameters.
+    [ch (id=set_node) [title [c u:set]]
+
+        A [c u:set] node assigns a value to one or more parameters.
 
         After defining a parameter, its value can be inserted in the document with a [xref node_id=get_node] node.
 
@@ -15,49 +17,49 @@
 
         Hence, the following code assigns the value [c light green] to parameter [c color]:
         [code
-            [!set color = "light green"]
+            [u:set color = "light green"]
         code]
 
-        The syntax rules for parameters are the same as those for [link url=[!get pdml_docs_extensions_url]user_manual/index.html#attributes text=attributes] (quoted/unquoted values, whitespace, character escapes, and lenient parsing):
+        The syntax rules for parameters are the same as those for [link url=[u:get pdml_docs_extensions_url]user_manual/index.html#attributes text=attributes] (quoted/unquoted values, whitespace, character escapes, and lenient parsing):
 
-        For example, several parameters can be assigned in a single [c !set] node, whitespace between attributes is ignored, and some values can be unquoted:
+        For example, several parameters can be assigned in a single [c u:set] node, whitespace between attributes is ignored, and some values can be unquoted:
         [code
-            [!set
+            [u:set
                 width=200
                 height=100
             ]
         code]
 
-        The rules for a parameter's [i name] are the same as those for a [link url=[!get pdml_docs_url]basic-specification/index.html#node_name text="node name"].
+        The rules for a parameter's [i name] are the same as those for a [link url=[u:get pdml_docs_url]basic-specification/index.html#node_name text="node name"].
 
         After assigning a value to a parameter, its value cannot be changed later in the document.
         Parameters are like constants in programming languages.
     ]
 
-    [ch (id=get_node) [title [c !get]]
+    [ch (id=get_node) [title [c u:get]]
 
-        A [c !get] node gets a parameter and inserts the parameter's value in the document. The parameter must have been defined with a [xref node_id=set_node] node before it can be used in a [c !get] node.
+        A [c u:get] node gets a parameter and inserts the parameter's value in the document. The parameter must have been defined with a [xref node_id=set_node] node before it can be used in a [c u:get] node.
 
         The name of the parameter to be retrieved is defined by the node's text content.
         Hence, the following code inserts the value of parameter [c color] into the document:
         [code
-            [!get color]
+            [u:get color]
         code]
     ]
 
-    [ch (id=ins-file_node) [title [c !ins-file]]
+    [ch (id=ins-file_node) [title [c u:ins-file]]
 
-        An [c !ins-file] node reads a text file and inserts the text into the PDML document.
+        A [c u:ins-file] node reads a text file and inserts the text into the PDML document.
 
         The file's path is specified by attribute [c path].
         
         For example, the following code inserts the text stored in file [c foo.txt] into the document:
         [code
-            [!ins-file path=foo.txt]
+            [u:ins-file path=foo.txt]
         code]
 
         The [c path] can be absolute or relative.
-        If it's relative, it is relative to the directory of the PDML file in which [c !ins-file] is used.
-        If [c !ins-file] is not used in a file, then the current working directory is used as root.
+        If it's relative, it is relative to the directory of the PDML file in which [c u:ins-file] is used.
+        If [c u:ins-file] is not used in a file, then the current working directory is used as root.
     ]
 ]

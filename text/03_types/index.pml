@@ -2,12 +2,14 @@
 
     This chapter describes type nodes.
 
+    Type nodes are all part of the namespace prefix [c t].
+
     [note
         The number of types currently supported is very limited.
         More types (e.g. number, boolean, time, URL, etc.) will be added in the future.
     ]
 
-    [!ins-file path=date.pml]
-    [!ins-file path=string.pml]
-    [!ins-file path=raw-text.pml]
+    [u:ins-file path=date.pml]
+    [u:ins-file path=string.pml]
+    [u:ins-file path=raw-text.pml]
 ]

@@ -12,6 +12,6 @@
         ]
     ]
 
-    [!ins-file path=01_PDML_API.pml]
-    [!ins-file path=02_core_API.pml]
+    [u:ins-file path=01_PDML_API.pml]
+    [u:ins-file path=02_core_API.pml]
 ]

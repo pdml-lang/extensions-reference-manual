@@ -1,6 +1,6 @@
 [ch (id=raw-text) [title [c raw-text]]
 
-    A [c !raw-text] type denotes a block of raw text.
+    A [c t:raw-text] type denotes a block of raw text.
 
     In this context, the term [i raw] means that the text is not interpreted by the parser.
     For example, the text [c \[foo\]] is not parsed as an empty node with name [c foo].
@@ -11,7 +11,7 @@
 
         Example:
         [code
-            [!raw-text
+            [t:raw-text
                 ~~~
                 first text line
                 ...
@@ -45,7 +45,7 @@
         Hence, the following node:
         [code
             """
-                [!raw-text
+                [t:raw-text
                     ~~~
                     if ( list[index] == 0 ) {
                         write_line ( "The value is zero." )
@@ -66,7 +66,7 @@
 
         Example:
         [code
-            [!raw-text
+            [t:raw-text
                 first text line
                 ...
                 last text line
@@ -80,7 +80,7 @@
         The indent of the text line with the smallest indent is removed in all text lines. Hence, this code:
         [code
             ~~~
-                [!raw-text
+                [t:raw-text
                         line 1
                     line 2
                             line 3
@@ -102,7 +102,7 @@
 
         Example:
         [code
-            [!raw-text first text line
+            [t:raw-text first text line
             ...
             last text line]
         code]
@@ -115,7 +115,7 @@
 
         Hence, this code:
         [code
-            [!raw-text line \[1\]
+            [t:raw-text line \[1\]
                 line 2
                     line 3
             ]
@@ -130,8 +130,8 @@
 
         This syntax variation is sometimes useful when PDML markup code needs to be parsed in a raw text node. Example:
         [code
-            [!raw-text first line
-            [!ins-file path=foo.txt]
+            [t:raw-text first line
+            [u:ins-file path=foo.txt]
             last line
             ]
         code]
